@@ -17,9 +17,9 @@
         </tr>
         @foreach($cate as $data)
         <tr>
-            <td>{{$data -> name}}</td>
+            <td>{{$data ->name}}</td>
             <td>
-                <form action="{{'/admin/categories/'.$data->id}}" method="POST">
+                <form action="{{'/admin/categories/index/'.$data->id}}" method="POST">
                     @csrf
                     @method("DELETE")
                     <button type="submit">DELETE</button>

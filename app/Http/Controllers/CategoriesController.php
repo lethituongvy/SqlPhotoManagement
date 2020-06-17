@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Category;
+use\App\Photo;
 
 class CategoriesController extends Controller
 {
@@ -25,8 +26,9 @@ class CategoriesController extends Controller
         // return view('/categories',['show' => $index]);
     }
     function delete($id){
+        Photo::where("id",$id)->delete();
         $category = Category::find($id);
-        $category->delete;
+        $category->delete();
         return redirect('/admin/categories/index');
     }
     function create(){

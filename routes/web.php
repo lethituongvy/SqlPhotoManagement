@@ -25,5 +25,5 @@ Route::get('/admin/categories/{id}/edit',"CategoriesController@edit");
 Route::patch('/admin/categories/{id}',"CategoriesController@update");
 
 //delete categories
-Route::delete('/admin/categories/{id}',"CategoriesController@delete");
+Route::delete('/admin/categories/index/{id}',"CategoriesController@delete");
 
